@@ -176,7 +176,7 @@ desired effect
               <!-- The user image in the navbar-->
               <img src="/public/admin/dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
               <!-- hidden-xs hides the username on small devices so only the image appears. -->
-              <span class="hidden-xs"><?php echo htmlspecialchars( $user, ENT_COMPAT, 'UTF-8', FALSE ); ?></span>
+              <span class="hidden-xs">Alexander</span>
             </a>
             <ul class="dropdown-menu">
               <!-- The user image in the menu -->
@@ -184,7 +184,7 @@ desired effect
                 <img src="/public/admin/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
 
                 <p>
-                  <?php echo htmlspecialchars( $user, ENT_COMPAT, 'UTF-8', FALSE ); ?>
+                  Alexander
                   <small>Member since Nov. 2012</small>
                 </p>
               </li>
@@ -234,7 +234,7 @@ desired effect
           <img src="/public/admin/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
-          <p><?php echo htmlspecialchars( $user, ENT_COMPAT, 'UTF-8', FALSE ); ?></p>
+          <p>Alexander</p>
           <!-- Status -->
           <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
         </div>

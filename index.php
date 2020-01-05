@@ -70,11 +70,7 @@ $app->get('/admin/users', function() {
 
 	$users = User::listAll();
 
-	$page = new PageAdmin([
-		"data"=>[
-			"user"=>$_SESSION["User"]["deslogin"]
-		]
-	]);
+	$page = new PageAdmin();
 
 	$page->setTpl("users", array(
 		"users"=>$users
@@ -86,11 +82,7 @@ $app->get('/admin/users/create', function() {
 
 	User::verifyLogin();
 
-	$page = new PageAdmin([
-		"data"=>[
-			"user"=>$_SESSION["User"]["deslogin"]
-		]
-	]);
+	$page = new PageAdmin();
 
 	$page->setTpl("users-create");
 
@@ -119,11 +111,7 @@ $app->get('/admin/users/:iduser', function($iduser){
 
 	$user->get((int)$iduser);
 
-	$page = new PageAdmin([
-		"data"=>[
-			"user"=>$_SESSION["User"]["deslogin"]
-		]
-	]);
+	$page = new PageAdmin();
 
 	$page->setTpl("users-update", array(
 		"user"=>$user->getValues()
