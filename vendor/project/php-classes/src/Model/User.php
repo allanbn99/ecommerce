@@ -8,6 +8,8 @@ use \Project\Model;
 class User extends Model {
 
     const SESSION = "User";
+    const SECRET = "Project_Secret";
+    const SECRET_IV = "Project_SecretIV";
 
     public static function login($login, $password) {
 
