@@ -4,7 +4,6 @@ namespace Project\Model;
 
 use \Project\Db\Sql;
 use \Project\Model;
-use \Project\Mailer;
 
 class Category extends Model {
 
