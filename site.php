@@ -3,12 +3,17 @@
 use \Project\Page;
 use \Project\Model\User;
 use \Project\Model\Category;
+use \Project\Model\Product;
 
 $app->get('/', function() {
     
+	$products = Product::listAll();
+
 	$page = new Page();
 
-	$page->setTpl("index");
+	$page->setTpl("index", [
+		'products'=>Product::checkList($products)
+	]);
 
 });
 
