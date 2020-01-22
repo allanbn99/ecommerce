@@ -33,30 +33,38 @@
             {/loop}
         </div>
         
+        {if="$pages[0].lastPage != 1"}
         <div class="row">
             <div class="col-md-12">
                 <div class="product-pagination text-center">
                     <nav>
                         <ul class="pagination">
+                        {if="$pages[0].actualPage != 1"}
                         <li>
-                            <a href="#" aria-label="Previous">
+                            <a href="/categories/{$category.idcategory}?page={$pages[0].actualPage - 1}" aria-label="Previous">
                             <span aria-hidden="true">«</span>
                             </a>
                         </li>
-                        <li><a href="#">1</a></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#">4</a></li>
-                        <li><a href="#">5</a></li>
+                        {/if}
+                        {loop="$pages"}
+                        {if="$value.actualPage == $value.page"}
+                        <li class="active"><a href="{$value.link}">{$value.page}</a></li>
+                        {else}
+                        <li><a href="{$value.link}">{$value.page}</a></li>
+                        {/if}
+                        {/loop}
+                        {if="$pages[0].actualPage != $pages[0].lastPage"}
                         <li>
-                            <a href="#" aria-label="Next">
+                            <a href="/categories/{$category.idcategory}?page={$pages[0].actualPage + 1}" aria-label="Next">
                             <span aria-hidden="true">»</span>
                             </a>
                         </li>
+                        {/if}
                         </ul>
                     </nav>                        
                 </div>
             </div>
         </div>
+        {/if}
     </div>
 </div>
